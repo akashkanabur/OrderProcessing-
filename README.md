@@ -243,68 +243,6 @@ Therefore, both services independently receive the order event.
           Notification        Payment
              Service           Service
 ```
-##🔑 Kafka Concepts Demonstrated
-Producer:
-
-The Order Service acts as the Kafka producer.
-
-It uses:
-
-KafkaTemplate<String, String>
-
-to publish messages.
-
-Consumer:
-
-Notification and Payment services act as Kafka consumers.
-
-They use:
-
-@KafkaListener
-
-to consume messages.
-
-Kafka Topic
-
-The project uses:
-
-order_topic
-
-to transport order events.
-
-Consumer Groups
-
-Two independent consumer groups are used:
-
-notification_group
-payment_group
-
-Using different groups allows both services to independently consume the same order event.
-
-##🐳 Docker Infrastructure
-
-Kafka and ZooKeeper are run using Docker.
-
-Start the infrastructure with:
-```bash
-docker compose up -d
-```
-Check running containers:
-```bash
-docker ps
-```
-Expected containers:
-
-order-kafka
-order-zookeeper
-
-Kafka is exposed on:
-
-localhost:9092
-
-ZooKeeper is exposed on:
-
-localhost:2181
 
 ▶️ How to Run
 1. Start Kafka and ZooKeeper
