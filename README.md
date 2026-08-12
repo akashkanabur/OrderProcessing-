@@ -290,6 +290,7 @@ Tomcat started on port 8083
 Once Kafka and all three services are running, send an order.
 
 Endpoint
+```
 POST http://localhost:8081/api/order/placeOrder
 Request Body
 {
@@ -297,19 +298,23 @@ Request Body
   "product": "Laptop",
   "quantity": 1
 }
+```
 Expected Response
 Order placed successfully!
-Expected Notification Output
 
-The Notification Service should receive the event:
+Expected Notification Output -- The Notification Service should receive the event:
 
-Order Received: {"orderId":"ORD001","product":"Laptop","quantity":1}
-Expected Payment Output
+Order Received: 
+```
+{"orderId":"ORD001","product":"Laptop","quantity":1}
+```
 
-The Payment Service should receive the same event:
+Expected Payment Output -- The Payment Service should receive the same event:
 
-Payment Service - Received order: {"orderId":"ORD001","product":"Laptop","quantity":1}
-
+Payment Service - Received order:
+```
+{"orderId":"ORD001","product":"Laptop","quantity":1}
+```
 Payment processed successfully!
 
 📊 End-to-End Flow
