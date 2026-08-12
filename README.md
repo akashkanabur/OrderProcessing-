@@ -285,7 +285,7 @@ Expected:
 
 Tomcat started on port 8083
 
-##🧪 Testing
+🧪 Testing
 
 Once Kafka and all three services are running, send an order.
 
@@ -312,7 +312,7 @@ Payment Service - Received order: {"orderId":"ORD001","product":"Laptop","quanti
 
 Payment processed successfully!
 
-##📊 End-to-End Flow
+📊 End-to-End Flow
 ```
                          POST Request
                               |
