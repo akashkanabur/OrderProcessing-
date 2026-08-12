@@ -55,6 +55,7 @@ Responsible for receiving order requests through a REST API and publishing order
 Port: 8081
 
 Flow:
+```text
 
 HTTP Request
      ↓
@@ -65,6 +66,7 @@ KafkaTemplate
 Kafka
      ↓
 order_topic
+```
 
 2. Notification Service
 
